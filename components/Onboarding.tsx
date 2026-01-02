@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Gender, ActivityLevel, Goal, UserProfile } from '../types';
+import { Gender, ActivityLevel, Goal, UserProfile } from '../scr/types';
 import { calculateGoals } from '../utils/calculations';
 import { ChevronRight, Activity, ShieldAlert, Utensils, X, ArrowLeft } from 'lucide-react';
 

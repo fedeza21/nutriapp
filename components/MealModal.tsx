@@ -1,8 +1,8 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Meal } from '../types';
+import { Meal } from '../scr/types';
 import { X, Camera, Mic, Sparkles, ChevronRight, PlayCircle } from 'lucide-react';
-import { parseMealMultimodal } from '../services/geminiService';
+import { parseMealMultimodal } from '../scr/services/geminiService';
 
 interface MealModalProps {
   isOpen: boolean;

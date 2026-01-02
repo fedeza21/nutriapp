@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Recipe } from '../types';
+import { Recipe } from '../scr/types';
 import { Clock, Sparkles, ChefHat, X, ChevronRight, RefreshCw } from 'lucide-react';
 
 interface RecipesViewProps {

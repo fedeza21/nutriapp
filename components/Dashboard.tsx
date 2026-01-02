@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { UserProfile, DailyLog, Meal } from '../types';
+import { UserProfile, DailyLog, Meal } from '../scr/types';
 import ProgressBar from './ui/ProgressBar';
 import { Flame, Sparkles, Trash2, Edit2, ExternalLink, ShieldCheck } from 'lucide-react';
 
