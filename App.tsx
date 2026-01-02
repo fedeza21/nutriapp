@@ -30,7 +30,7 @@ const App: React.FC = () => {
     };
   });
 
-  const [view, setView] = useState<'dashboard' | 'onboarding' | 'goals' | 'recipes'>('dashboard');
+  const [view, setView] = useState<'dashboard' | 'goals' | 'recipes'>('dashboard');
   const [isMealModalOpen, setIsMealModalOpen] = useState(false);
   const [editingMeal, setEditingMeal] = useState<Meal | null>(null);
 
@@ -112,7 +112,7 @@ const App: React.FC = () => {
     setIsMealModalOpen(true);
   };
 
-  if (!state.profile || view === 'onboarding') {
+  if (!state.profile) {
     return (
       <Onboarding 
         onComplete={handleProfileComplete} 
@@ -188,21 +188,26 @@ const App: React.FC = () => {
           </button>
         </div>
 
-        <button 
-          onClick={() => setView('recipes')} 
-          className={`flex flex-col items-center gap-1 flex-1 py-4 rounded-[3rem] transition-all ${view === 'recipes' ? 'bg-black text-white' : 'text-gray-400 hover:text-gray-600'}`}
-        >
-          <ChefHat className="w-5 h-5" />
-          <span className="text-[10px] font-black uppercase tracking-widest">Cocina</span>
-        </button>
-        
-        <button 
-          onClick={() => setView('onboarding')} 
-          className={`flex flex-col items-center gap-1 flex-1 py-4 rounded-[3rem] transition-all ${view === 'onboarding' ? 'bg-black text-white' : 'text-gray-400 hover:text-gray-600'}`}
-        >
-          <User className="w-5 h-5" />
-          <span className="text-[10px] font-black uppercase tracking-widest">Perfil</span>
-        </button>
+       <button 
+  onClick={() => setView('recipes')} 
+  className={`flex flex-col items-center gap-1 flex-1 py-4 rounded-[3rem] transition-all ${
+    view === 'recipes'
+      ? 'bg-black text-white'
+      : 'text-gray-400 hover:text-gray-600'
+  }`}
+>
+  <ChefHat className="w-5 h-5" />
+  <span className="text-[10px] font-black uppercase tracking-widest">Cocina</span>
+</button>
+
+<button 
+  onClick={() => setState(prev => ({ ...prev, profile: null }))}
+  className="flex flex-col items-center gap-1 flex-1 py-4 rounded-[3rem] text-gray-400 hover:text-gray-600 transition-all"
+>
+  <User className="w-5 h-5" />
+  <span className="text-[10px] font-black uppercase tracking-widest">Perfil</span>
+</button>
+
       </div>
     </div>
   );
