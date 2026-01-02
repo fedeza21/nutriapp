@@ -6,7 +6,7 @@ import Onboarding from '../components/Onboarding';
 import History from '../components/History';
 import RecipesView from '../components/RecipesView';
 import MealModal from '../components/MealModal';
-import { getTodayKey } from '../utils/calculations';
+import { getTodayKey } from './utils/calculations';
 import { getPersonalizedRecipes } from './services/geminiService';
 import { Home, Target, ChefHat, User, Plus } from 'lucide-react';
 
