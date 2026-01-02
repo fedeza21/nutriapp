@@ -1,0 +1,8 @@
+{
+  "name": "Nutri-App",
+  "description": "A minimalist and visual nutrition tracker focused on remaining calories and macronutrients, designed for consistency over clinical precision.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
