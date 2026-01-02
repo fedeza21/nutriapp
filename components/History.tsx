@@ -3,7 +3,7 @@ import React from 'react';
 import { DailyLog, UserProfile } from '../scr/types';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { ArrowLeft, Target, Trophy } from 'lucide-react';
-import { getFormattedDate } from '../utils/calculations';
+import { getFormattedDate } from '../scr/utils/calculations';
 
 interface HistoryProps {
   logs: Record<string, DailyLog>;
